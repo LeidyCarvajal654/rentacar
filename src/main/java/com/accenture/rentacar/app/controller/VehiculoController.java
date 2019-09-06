@@ -43,7 +43,7 @@ public class VehiculoController {
 	@PostMapping("/actualizar")
 	public Vehiculo actualizar (@RequestBody Vehiculo vehiculo) {
 		
-		Vehiculo vehiAActualizar = new Vehiculo ("Toyota"));
+		Vehiculo vehiAActualizar = new Vehiculo ();
 		Vehiculo vehiActual = vehiculoService.buscarVehiculoPorId(vehiculo.getId());
 		vehiAActualizar.setId(vehiculo.getId());
 		vehiAActualizar.setColor(vehiculo.getColor());

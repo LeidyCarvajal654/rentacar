@@ -17,7 +17,7 @@ import javax.persistence.TemporalType;
 public class Vehiculo {
 	
 	@Id
-	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	@GeneratedValue(strategy=GenerationType.IDENTITY)//estrategia de generacion de ese id 
 	private Long id; //no es el dato primitivo es de clase long, por ser muchos registros en las tablas
 	
 	@Column(name="modelo_auto")// para saber como se va a ver en la tabla 
@@ -26,8 +26,7 @@ public class Vehiculo {
 	private String placa;
 	private String linea;
 	private String color;
-	
-	
+		
 	
 	@Column(name = "fecha_creacion_registro") //cambiar los datos de la taba 
 	@Temporal (TemporalType.DATE)  //
