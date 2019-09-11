@@ -13,5 +13,6 @@ public interface IVehiculoService {
 	public Vehiculo buscarVehiculoPorId(Long id); //Traerá un solo vehicuo a través del id 
 	
 	public List<Vehiculo> listarTodos();
+	public List<Vehiculo> guardarVArios (Vehiculo[] Vehiculo);
 
 }

@@ -42,8 +42,8 @@ public class ClienteController {
     	@PostMapping("/actualizar")
     	public Cliente actualizar (@RequestBody Cliente cliente) {
     		
-    		Cliente clienteService = new Cliente ();
-    		Cliente cliente = clienteService.b
+    		Cliente entcliente = new Cliente ();
+    		Cliente cliente1 =  
     		clienteService.setId(cliente.getId());
     		clienteService.setCedula(cliente.getCedula());
     		clienteService.setNombre(cliente.getNombre());
@@ -54,7 +54,7 @@ public class ClienteController {
     		clienteService.setFechaCreacionRegistro(cliente.getFechaCreacionRegistro());
     		
     		
-    			
+    		//prepersist se ejecuta antes de guardar 	
     	
     }
 }	
