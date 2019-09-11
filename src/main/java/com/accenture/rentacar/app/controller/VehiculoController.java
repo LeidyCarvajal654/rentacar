@@ -39,6 +39,10 @@ public class VehiculoController {
 		return vehiculoService.guardar(vehiculo);
 	}
 	
+	@PostMapping("Varios -vehiculos")
+	public Vehiculo [] guardar (@RequestBody Vehiculo [] vehiculos);// esto se hace para iprimir un array 
+	return vehiculoService.guardarVArios(vehiculos);
+	
 	@SuppressWarnings ("unused")
 	@PostMapping("/actualizar")
 	public Vehiculo actualizar (@RequestBody Vehiculo vehiculo) {

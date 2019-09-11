@@ -11,7 +11,6 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
-import javax.persistence.PrePersist;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
@@ -20,6 +19,46 @@ import javax.persistence.TemporalType;
 @Table(name = "Clientes_X_vehiculo")
 
 public class ClienteVehiculo {
+
+	public Long getId() {
+		return id;
+	}
+
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+
+
+	public Cliente getCliente() {
+		return cliente;
+	}
+
+
+	public void setCliente(Cliente cliente) {
+		this.cliente = cliente;
+	}
+
+
+	public List<Vehiculo> getVehiculos() {
+		return vehiculos;
+	}
+
+
+	public void setVehiculos(List<Vehiculo> vehiculos) {
+		this.vehiculos = vehiculos;
+	}
+
+
+	public Date getFechaCreacionRegistro() {
+		return fechaCreacionRegistro;
+	}
+
+
+	public void setFechaCreacionRegistro(Date fechaCreacionRegistro) {
+		this.fechaCreacionRegistro = fechaCreacionRegistro;
+	}
+
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -36,13 +75,8 @@ public class ClienteVehiculo {
     @Temporal(TemporalType.DATE)
     @Column(name="fecha_creacion_registro")
     private Date fechaCreacionRegistro;
+ 
     
-    private String observaciones;
-    
-    @PrePersist
-    public void prePersist() {
-    	fechaCreacionRegistro = new Date();
-    }
 
     
 }

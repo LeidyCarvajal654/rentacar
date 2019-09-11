@@ -43,8 +43,17 @@ public class ClienteController {
     	public Cliente actualizar (@RequestBody Cliente cliente) {
     		
     		Cliente clienteService = new Cliente ();
-    		Cliente clienteService = clienteService
-    				
+    		Cliente cliente = clienteService.b
+    		clienteService.setId(cliente.getId());
+    		clienteService.setCedula(cliente.getCedula());
+    		clienteService.setNombre(cliente.getNombre());
+    		clienteService.setApellido(cliente.getApellido());
+    		clienteService.setDireccion(cliente.getDireccion());
+    		clienteService.setTelefono(cliente.getTelefono());
+    		clienteService.setEmail(cliente.getEmail());
+    		clienteService.setFechaCreacionRegistro(cliente.getFechaCreacionRegistro());
+    		
+    		
     			
     	
     }

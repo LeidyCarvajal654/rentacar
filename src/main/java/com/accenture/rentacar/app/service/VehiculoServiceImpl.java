@@ -39,6 +39,21 @@ public class VehiculoServiceImpl implements IVehiculoService {
 	public List<Vehiculo> listarTodos() {
 		// TODO Auto-generated method stub
 		return (List<Vehiculo>) vehiculoDao.findAll();
+		
+	@Override
+	
+	public List<Vehiculo> guardarVarios(Vehiculo[] vhiculo ){
+		List<Vehiculo> retorno = new ArrayList<Vehiculo>();  //Declarar una lista de array
+		for (Vehiculo vehiculo : Vehiculos) {
+			retorno.add(vehiculoDao.save(vehiculo)); //Con esta funcion va entrando y lo pone en la lista
+			
+			//este es un for each, no hay que decir hasta donde llegar, ejemplo un array
+			
+			vehiculoDao.save(vehiculo);
+		}
+		
+		return retorno;
+	}
 	}
 
 }
