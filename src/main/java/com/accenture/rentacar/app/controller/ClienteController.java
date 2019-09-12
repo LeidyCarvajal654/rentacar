@@ -43,16 +43,17 @@ public class ClienteController {
     	public Cliente actualizar (@RequestBody Cliente cliente) {
     		
     		Cliente entcliente = new Cliente ();
-    		Cliente cliente1 =  
-    		clienteService.setId(cliente.getId());
-    		clienteService.setCedula(cliente.getCedula());
-    		clienteService.setNombre(cliente.getNombre());
-    		clienteService.setApellido(cliente.getApellido());
-    		clienteService.setDireccion(cliente.getDireccion());
-    		clienteService.setTelefono(cliente.getTelefono());
-    		clienteService.setEmail(cliente.getEmail());
-    		clienteService.setFechaCreacionRegistro(cliente.getFechaCreacionRegistro());
+    		Cliente clienteActual = clienteService.buscarClientePorID(cliente.getId()); 
+    		entcliente.setId(cliente.getId());
+    		entcliente.setCedula(cliente.getCedula());
+    		entcliente.setNombre(cliente.getNombre());
+    		entcliente.setApellido(cliente.getApellido());
+    		entcliente.setDireccion(cliente.getDireccion());
+    		entcliente.setTelefono(cliente.getTelefono());
+    		entcliente.setEmail(cliente.getEmail());
+    		entcliente.setFechaCreacionRegistro(cliente.getFechaCreacionRegistro());
     		
+    		return clienteService.guardar(entcliente);
     		
     		//prepersist se ejecuta antes de guardar 	
     	

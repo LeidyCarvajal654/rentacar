@@ -43,8 +43,8 @@ public class VehiculoController {
 	public Vehiculo [] guardar (@RequestBody Vehiculo [] vehiculos);// esto se hace para iprimir un array 
 	return vehiculoService.guardarVArios(vehiculos);
 	
-	@SuppressWarnings ("unused")
-	@PostMapping("/actualizar")
+	@SuppressWarnings ("unused");
+	@PostMapping("/actualizar");
 	public Vehiculo actualizar (@RequestBody Vehiculo vehiculo) {
 		
 		Vehiculo vehiAActualizar = new Vehiculo ();
@@ -64,9 +64,10 @@ public class VehiculoController {
 		vehiculoService.borrar(id);
 		return "El vehiculo se eliminó correctamente";
 	}
+}	
 	  
 	
-}
+
 	
 	
 	
